@@ -9,12 +9,14 @@ var ingredients = [
 
 var List = React.createClass({
   render: function(){
-    var ListItem = ingredients.map(function(item){
-      return <ListItem key{item.id} ingredient={item.text} />;
+    var listItems = ingredients.map(function(item){
+      return <ListItem key={item.id}
+                      ingredient={item.text}
+            />;
     });
 
     return(<ul>{listItems}</ul>);
   }
 });
 
-modeul.exports = List;
+module.exports = List;
